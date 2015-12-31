@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/layouts/">
+    <excludes>
+        <pattern>/assets/*</pattern>
+        <pattern>/api/*</pattern>
+        <pattern>/uf/*</pattern>
+        <pattern>/jd/*</pattern>
+        <pattern>/upload/*</pattern>
+        <pattern>/login</pattern>
+        <pattern>/logout</pattern>
+        <pattern>/index.jsp</pattern>
+    </excludes>
+    <decorator name="default" page="default.jsp">
+        <pattern>/main</pattern>
+        <pattern>/system/*</pattern>
+        <pattern>/authority/*</pattern>
+        <pattern>/application/*</pattern>
+        <pattern>/safety/*</pattern>
+        <pattern>/platform/*</pattern>
+        <pattern>/import/*</pattern>
+        <pattern>/setup/*</pattern>
+        <pattern>/device/*</pattern>
+        <pattern>/meet/*</pattern>
+        <pattern>/app-score/*</pattern>
+        <pattern>/news/*</pattern>
+        <pattern>/meeting/*</pattern>
+        <pattern>/social/*</pattern>
+        <pattern>/attendance/*</pattern>
+        <pattern>/authority/*</pattern>
+        <pattern>/crm/*</pattern>
+        <pattern>/library/*</pattern>
+        <pattern>/auto/*</pattern>
+        <pattern>/regulation/*</pattern>
+        <pattern>/affairs/*</pattern>
+        <pattern>/eka/*</pattern>
+        <pattern>/health/*</pattern>
+        <pattern>/welfare*</pattern>
+        <pattern>/notice*</pattern>
+    </decorator>
+</decorators>

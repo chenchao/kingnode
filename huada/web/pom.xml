@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.kingnode.xsimple</groupId>
+        <artifactId>kingnode-xsimple</artifactId>
+        <version>1.0.7</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>kingnode-xsimple-web</artifactId>
+    <packaging>war</packaging>
+    <name>Kingnode :: xSimple :: Web</name>
+
+    <!-- 依赖项定义 -->
+    <dependencies>
+        <!-- Diva begin -->
+        <dependency>
+            <groupId>com.kingnode</groupId>
+            <artifactId>kingnode-diva-core</artifactId>
+        </dependency>
+        <!-- Diva end -->
+
+        <dependency>
+            <groupId>com.kingnode.xsimple</groupId>
+            <artifactId>kingnode-xsimple-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple</groupId>
+            <artifactId>kingnode-xsimple-app</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple</groupId>
+            <artifactId>kingnode-xsimple-ldap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple</groupId>
+            <artifactId>kingnode-xsimple-third</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-affairs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-approval</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-attendance</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-automanage</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-eka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-meeting</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-news</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-regulation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-social</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-health</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-workflow</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kingnode.xsimple.ecm</groupId>
+            <artifactId>kingnode-xsimple-ecm-testmodel</artifactId>
+        </dependency>
+
+
+        <!-- PERSISTENCE begin -->
+        <!-- hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+        </dependency>
+
+        <!-- spring data access -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data-jpa.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <!-- spring aop -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- connection pool -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jdbc</artifactId>
+            <version>${tomcat-jdbc.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- jdbc driver -->
+        <dependency>
+            <groupId>${jdbc.driver.groupId}</groupId>
+            <artifactId>${jdbc.driver.artifactId}</artifactId>
+            <version>${jdbc.driver.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- PERSISTENCE end -->
+
+        <!-- WEB begin -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>opensymphony</groupId>
+            <artifactId>sitemesh</artifactId>
+            <version>${sitemesh.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <!-- WEB end -->
+
+        <!-- SECURITY begin -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!-- SECURITY end -->
+
+        <!-- JSR303 BeanValidator -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+
+        <!-- JSON begin -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jaxb-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!-- JSON end -->
+
+        <!-- SOAP begin -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+        </dependency>
+        <!-- SOAP end -->
+
+
+        <!-- LOGGING begin -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- 代码直接调用log4j会被桥接到slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- 代码直接调用common-logging会被桥接到slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- 代码直接调用java.util.logging会被桥接到slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.log4jdbc</groupId>
+            <artifactId>log4jdbc</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- LOGGING end -->
+
+        <!-- GENERAL UTILS begin -->
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <!-- GENERAL UTILS end -->
+
+        <!-- TEST begin -->
+        <dependency>
+            <groupId>com.kingnode</groupId>
+            <artifactId>kingnode-diva-core</artifactId>
+            <version>${diva.version}</version>
+            <classifier>tests</classifier>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- TEST end -->
+
+        <!--下面的包随时准备废除-->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>1.8.6</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-core</artifactId>
+                <version>2.6.8</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- compiler插件, 设定JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+
+            <!-- war打包插件, 设定war包名称不带版本号 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <warName>${project.artifactId}</warName>
+                </configuration>
+            </plugin>
+
+            <!-- test插件, 仅测试名称为*Test的类,使用支持分组测试的surefire-junit47 driver -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <argLine>-Xmx256M</argLine>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-junit47</artifactId>
+                        <version>2.16</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <!-- 增加functional test的Source目录 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>add-functional-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/test/functional</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- resources插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+
+            <!-- install插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.1</version>
+            </plugin>
+
+            <!-- ant插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

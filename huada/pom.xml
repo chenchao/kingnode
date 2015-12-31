@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.kingnode</groupId>
+        <artifactId>kingnode-diva-parent</artifactId>
+        <version>1.0.2</version>
+    </parent>
+    <groupId>com.kingnode.xsimple</groupId>
+    <artifactId>kingnode-xsimple</artifactId>
+    <version>1.0.7</version>
+    <name>Kingnode :: xSimple</name>
+    <packaging>pom</packaging>
+
+    <description>Kingnode xSimple</description>
+    <url>http://www.kingnode.com</url>
+    <inceptionYear>2006-2014</inceptionYear>
+    <organization>
+        <name>深圳前海诺德咨询服务有限公司</name>
+        <url>http://www.kingnode.com</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>chirs</id>
+            <name>Chirs Chou</name>
+            <email>zhoujin at kingnode.com</email>
+            <organization>Kingnode</organization>
+            <roles>
+                <role>Project leader</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <properties>
+        <!-- 主要依赖库的版本定义 -->
+        <diva.version>1.0.2</diva.version>
+        <hibernate.version>4.3.5.Final</hibernate.version>
+        <spring-data-jpa.version>1.7.0.RELEASE</spring-data-jpa.version>
+        <spring-ws.version>2.2.0.RELEASE</spring-ws.version>
+        <spring-ldap.version>2.0.2.RELEASE</spring-ldap.version>
+        <hibernate-validator.version>5.0.3.Final</hibernate-validator.version>
+        <tomcat-jdbc.version>7.0.52</tomcat-jdbc.version>
+        <sitemesh.version>2.4.2</sitemesh.version>
+        <shiro.version>1.2.3</shiro.version>
+        <ehcache.version>2.6.9</ehcache.version>
+        <jackson.version>2.4.3</jackson.version>
+        <slf4j.version>1.7.7</slf4j.version>
+        <logback.version>1.1.2</logback.version>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <commons-io.version>2.4</commons-io.version>
+        <guava.version>18.0</guava.version>
+        <joda-time.version>2.5</joda-time.version>
+        <dozer.version>5.5.1</dozer.version>
+        <httpclient.version>4.3.5</httpclient.version>
+        <freemarker.version>2.3.21</freemarker.version>
+        <poi.version>3.10-FINAL</poi.version>
+        <cxf.version>3.0.0</cxf.version>
+
+        <aspectj.version>1.7.4</aspectj.version>
+        <junit.version>4.11</junit.version>
+        <assertj.version>1.6.0</assertj.version>
+        <mockito.version>1.9.5</mockito.version>
+        <selenium.version>2.40.0</selenium.version>
+        <jetty.version>8.1.16.v20140903</jetty.version>
+        <h2.version>1.4.182</h2.version>
+
+        <!-- Plugin的属性定义 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+
+        <!-- 项目属性 -->
+        <xSimple.version>1.0.7</xSimple.version>
+        <ecm.version>1.0.1</ecm.version>
+        <!--<jdbc.driver.groupId>com.h2database</jdbc.driver.groupId>-->
+        <!--<jdbc.driver.artifactId>h2</jdbc.driver.artifactId>-->
+        <!--<jdbc.driver.version>${h2.version}</jdbc.driver.version>-->
+        <jdbc.driver.groupId>mysql</jdbc.driver.groupId>
+       <jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
+       <jdbc.driver.version>5.1.22</jdbc.driver.version>
+       <!--<jdbc.driver.groupId>com.oracle</jdbc.driver.groupId>-->
+       <!--<jdbc.driver.artifactId>ojdbc6</jdbc.driver.artifactId>-->
+       <!--<jdbc.driver.version>11.2.0.2.0</jdbc.driver.version>-->
+    </properties>
+    <repositories>
+        <repository>
+            <id>ZW</id>
+            <name>Team Nexus Repository</name>
+            <url>http://nexus.freeoa.com</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <!-- 设定插件仓库, 如有Nexus私服, 取消注释并指向正确的服务器地址 -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ZW</id>
+            <name>Team Nexus Repository</name>
+            <url>http://nexus.freeoa.com</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kingnode.xsimple</groupId>
+                <artifactId>kingnode-xsimple-api</artifactId>
+                <version>${xSimple.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple</groupId>
+                <artifactId>kingnode-xsimple-app</artifactId>
+                <version>${xSimple.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple</groupId>
+                <artifactId>kingnode-xsimple-third</artifactId>
+                <version>${xSimple.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple</groupId>
+                <artifactId>kingnode-xsimple-web</artifactId>
+                <version>${xSimple.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple</groupId>
+                <artifactId>kingnode-xsimple-ldap</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-affairs</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-approval</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-attendance</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-automanage</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-eka</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-library</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-meeting</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-news</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-regulation</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-social</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-health</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-workflow</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kingnode.xsimple.ecm</groupId>
+                <artifactId>kingnode-xsimple-ecm-testmodel</artifactId>
+                <version>${ecm.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>api</module>
+        <module>app</module>
+        <module>web</module>
+        <module>third</module>
+        <module>ldap</module>
+        <!--ECM项目模块 -->
+        <module>ecm</module>
+    </modules>
+    <build>
+        <plugins>
+            <!-- compiler插件, 设定JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

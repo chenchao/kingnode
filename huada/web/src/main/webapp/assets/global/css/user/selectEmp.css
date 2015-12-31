@@ -1,0 +1,91 @@
+.emp-select-box {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    /*background-color:#fff;*/
+    /*border:1px solid #333;*/
+    margin: 0 auto;
+
+}
+
+.trees-col {
+    width: 250px;
+    border: 1px solid #67c6bf;
+}
+
+.emp-col {
+    box-flex: 5;
+    -moz-box-flex: 5;
+    -webkit-box-flex: 5;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid #67c6bf;
+    border-bottom: 1px solid #67c6bf;
+}
+
+.result-col {
+    box-flex: 2;
+    -moz-box-flex: 2;
+    -webkit-box-flex: 2;
+    width: 200px;
+
+    border: 1px solid #67c6bf;
+}
+
+.-select-box {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    /*background-color:#fff;*/
+    /*border:1px solid #333;*/
+    margin: 0 auto;
+    box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+}
+
+.tree-1 {
+    box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    justify-content: center;
+    height: 255px;
+}
+
+.tree-2 {
+    box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    justify-content: center;
+    height: 255px;
+    border-top: 1px solid #67c6bf;
+}
+
+div.tree-1 div.actions {
+    padding: 5px;
+    border: 1px #44b6ae solid;
+    background: #44b6ae;
+}
+
+div.tree-2 div.actions {
+    padding: 5px;
+    border: 1px #44b6ae solid;
+    background: #44b6ae;
+}
+
+div.result-col div.actions {
+    padding: 5px;
+    border: 1px #44b6ae solid;
+    background: #44b6ae;
+}
+
+/*
+<div class="emp-select-box">
+<div class="trees-col">111</div>
+<div class="emp-col">222</div>
+<div class="result-col">333</div>
+</div>
+*/

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.kingnode.xsimple</groupId>
+        <artifactId>kingnode-xsimple</artifactId>
+        <version>1.0.7</version>
+    </parent>
+    <groupId>com.kingnode.xsimple.ecm</groupId>
+    <artifactId>kingnode-xsimple-ecm</artifactId>
+    <version>1.0.1</version>
+    <name>Kingnode :: xSimple :: ECM</name>
+    <packaging>pom</packaging>
+
+    <description>Kingnode xSimple</description>
+    <url>http://www.kingnode.com</url>
+    <inceptionYear>2006-2014</inceptionYear>
+    <organization>
+        <name>深圳前海诺德咨询服务有限公司</name>
+        <url>http://www.kingnode.com</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>chirs</id>
+            <name>Chirs Chou</name>
+            <email>zhoujin at kingnode.com</email>
+            <organization>Kingnode</organization>
+            <roles>
+                <role>Project leader</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <repositories>
+        <repository>
+            <id>ZW</id>
+            <name>Team Nexus Repository</name>
+            <url>http://nexus.freeoa.com</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <!-- 设定插件仓库, 如有Nexus私服, 取消注释并指向正确的服务器地址 -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ZW</id>
+            <name>Team Nexus Repository</name>
+            <url>http://nexus.freeoa.com</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <modules>
+        <!--审批-->
+        <module>approval</module>
+        <!--新闻公告-->
+        <module>news</module>
+        <!--会议管理-->
+        <module>meeting</module>
+        <!--考勤管理-->
+        <module>attendance</module>
+        <!--用车管理-->
+        <module>automanage</module>
+        <!--图书管理-->
+        <module>library</module>
+        <!--社交-->
+        <module>social</module>
+        <!--壹卡会-->
+        <module>eka</module>
+        <!--企业管理制度-->
+        <module>regulation</module>
+        <!--事务接口人-->
+        <module>affairs</module>
+        <!--保健预约-->
+        <module>health</module>
+        <!--保健预约-->
+        <module>workflow</module>
+        <!--保健预约-->
+        <module>testmodel</module>
+    </modules>
+</project>
